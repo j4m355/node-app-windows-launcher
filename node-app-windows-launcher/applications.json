@@ -1,1 +1,6 @@
-﻿{}
+﻿{
+ "AppName" : {
+				"Path" : "/", 
+				"Command" : "node index.js"
+				}
+}
