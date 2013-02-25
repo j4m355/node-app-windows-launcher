@@ -11,7 +11,7 @@ namespace library
     public class ApplicationService
     {
         public string JsonPath { get; set; }
-        public List<Model> Applications { get; set; }
+        public List<Application> Applications { get; set; }
  
         public ApplicationService(string jsonPath)
         {
@@ -24,16 +24,16 @@ namespace library
             var output = StreamReader.ReadToEnd();
             StreamReader.Close();
 
-            Applications = JsonConvert.DeserializeObject<List<Model>>(output);
+            var egg = JsonConvert.DeserializeObject<List<Application>>(output);
 
         }
 
         public void StartApplications()
         {
-            foreach (var application in Applications)
+           /* foreach (var application in Applications)
             {
                 
-            }
+            }*/
         }
     }
 }

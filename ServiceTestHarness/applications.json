@@ -1,0 +1,12 @@
+﻿{
+"Application":[{
+				"Name" : "Top",
+				"Path" : "/", 
+				"Command" : "node index.js"
+				},
+				{
+				"Name" : "Egg",
+				"Path" : "/", 
+				"Command" : "node index.js"
+				}]
+}

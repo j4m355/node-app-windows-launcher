@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "node-app-windows-launcher",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "library", "library\library.csproj", "{74EBF0C5-BC29-4253-8F87-4562122F3B9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTestHarness", "ServiceTestHarness\ServiceTestHarness.csproj", "{31A54A99-885E-4B7C-A16B-EED5E628BB37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{74EBF0C5-BC29-4253-8F87-4562122F3B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74EBF0C5-BC29-4253-8F87-4562122F3B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74EBF0C5-BC29-4253-8F87-4562122F3B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A54A99-885E-4B7C-A16B-EED5E628BB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A54A99-885E-4B7C-A16B-EED5E628BB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A54A99-885E-4B7C-A16B-EED5E628BB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A54A99-885E-4B7C-A16B-EED5E628BB37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
