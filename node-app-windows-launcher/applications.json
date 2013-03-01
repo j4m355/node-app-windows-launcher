@@ -1,7 +1,14 @@
 ﻿{
- "AppName" : {
-				"Path" : "/", 
-				"Command" : "node index.js"
-				}
-				}
+"Application":[{
+				"Name" : "Top",
+				"Path" : "C:\\code\\node-server-resource-monitor\\", 
+				"Command" : "node.exe",
+				"Parameters" : "index.js"
+				},
+				{
+				"Name" : "Egg",
+				"Path" : "C:\\code\\node-server-resource-monitor2\\", 
+				"Command" : "node.exe",
+				"Parameters" : "index.js"
+				}]
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
+using library;
 
 namespace node_app_windows_launcher
 {
@@ -19,6 +20,9 @@ namespace node_app_windows_launcher
 
         protected override void OnStart(string[] args)
         {
+            var applicationService = new ApplicationService("applications.json");
+            applicationService.Read();
+            applicationService.StartApplications();
         }
 
         protected override void OnStop()

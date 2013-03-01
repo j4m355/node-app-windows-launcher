@@ -1,12 +1,14 @@
 ﻿{
 "Application":[{
 				"Name" : "Top",
-				"Path" : "/", 
-				"Command" : "node index.js"
+				"Path" : "C:\\code\\node-server-resource-monitor\\", 
+				"Command" : "node.exe",
+				"Parameters" : "index.js"
 				},
 				{
-				"Name" : "Egg",
-				"Path" : "/", 
-				"Command" : "node index.js"
+				"Name" : "whats-my-ip",
+				"Path" : "C:\\code\\node-whats-my-ip\\", 
+				"Command" : "node.exe",
+				"Parameters" : "index.js"
 				}]
 }
