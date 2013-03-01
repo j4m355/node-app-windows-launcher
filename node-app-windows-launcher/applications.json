@@ -6,8 +6,8 @@
 				"Parameters" : "index.js"
 				},
 				{
-				"Name" : "Egg",
-				"Path" : "C:\\code\\node-server-resource-monitor2\\", 
+				"Name" : "whats-my-ip",
+				"Path" : "C:\\code\\node-whats-my-ip\\", 
 				"Command" : "node.exe",
 				"Parameters" : "index.js"
 				}]

@@ -13,14 +13,12 @@ namespace library
     {
         public string JsonPath { get; set; }
         public Model Applications { get; set; }
+        private List<int> Pids { get; set; } 
 
         public ApplicationService(string jsonPath)
         {
             JsonPath = jsonPath;
-        }
-
-        public void Read()
-        {
+            Pids = new List<int>();
             var streamReader = new StreamReader(JsonPath);
             var output = streamReader.ReadToEnd();
             streamReader.Close();
@@ -37,6 +35,14 @@ namespace library
             }
         }
 
+        public void StopApplications()
+        {
+            foreach (var process in Pids.Select(Process.GetProcessById))
+            {
+                process.Kill();
+            }
+        }
+
         private void Execute(string command, string path, string parameters)
         {
             var process = new Process();
@@ -49,6 +55,8 @@ namespace library
                                 };
             process.StartInfo = startInfo;
             process.Start();
+            Pids.Add(process.Id);
         }
+
     }
 }

@@ -13,20 +13,23 @@ namespace node_app_windows_launcher
 {
     public partial class Service1 : ServiceBase
     {
+        public ApplicationService ApplicationService { get; set; }
+
         public Service1()
         {
             InitializeComponent();
+            ApplicationService = new ApplicationService();
         }
 
         protected override void OnStart(string[] args)
         {
-            var applicationService = new ApplicationService("applications.json");
-            applicationService.Read();
-            applicationService.StartApplications();
+            ApplicationService.Read("applications.json");
+            ApplicationService.StartApplications();
         }
 
         protected override void OnStop()
         {
+            ApplicationService.StopApplications();
         }
     }
 }
