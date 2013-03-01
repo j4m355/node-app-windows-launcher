@@ -11,8 +11,8 @@ namespace ServiceTestHarness
     {
         static void Main(string[] args)
         {
-            var applicationService = new ApplicationService("applications.json");
-            applicationService.Read();
+            var applicationService = new ApplicationService();
+            applicationService.Read("applications.json");
             applicationService.StartApplications();
             Console.Read();
             applicationService.StopApplications();
