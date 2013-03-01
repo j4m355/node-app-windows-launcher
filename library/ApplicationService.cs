@@ -15,10 +15,13 @@ namespace library
         public Model Applications { get; set; }
         private List<int> Pids { get; set; } 
 
-        public ApplicationService(string jsonPath)
+        public ApplicationService()
         {
-            JsonPath = jsonPath;
             Pids = new List<int>();
+        }
+
+        public void Read(string jsonPath)
+        {
             var streamReader = new StreamReader(JsonPath);
             var output = streamReader.ReadToEnd();
             streamReader.Close();
@@ -27,6 +30,8 @@ namespace library
 
         public void StartApplications()
         {
+            if(JsonPath == null) throw new Exception();
+
             foreach (var a in Applications.Application)
             {
                 var aCopy = a;
