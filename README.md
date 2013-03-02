@@ -33,10 +33,6 @@ Go to ```Services.msc``` and start ```node the ```Node-App-Windows-Launcher``` s
 
 
 
-##What it does
-Executes ```top``` or ```tasklist``` (if windows) on the server and returns the result to any client browser. Useful for keeping an eye on your servers. Looks pretty good on mobiles and tablets too.
-
-![Alt text](/app/public/images/screenshot.png?raw=true "User Interface")
 
 
 
