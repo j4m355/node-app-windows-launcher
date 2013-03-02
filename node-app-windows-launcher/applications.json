@@ -1,12 +1,12 @@
 ﻿{
 "Application":[{
-				"Name" : "Top",
+				"Name" : "App1",
 				"Path" : "C:\\code\\node-server-resource-monitor\\", 
 				"Command" : "C:\\Program Files\\nodejs\\node.exe",
 				"Parameters" : "index.js"
 				},
 				{
-				"Name" : "whats-my-ip",
+				"Name" : "App2 etc",
 				"Path" : "C:\\code\\node-whats-my-ip\\", 
 				"Command" : "C:\\Program Files\\nodejs\\node.exe",
 				"Parameters" : "index.js"
