@@ -2,7 +2,7 @@
 
 Launch all your node apps (or anything I guess) easily with this windows service - simply add your application to application.json
 
-\centerline{\library[height=2in]{logo.png}}
+![Alt text](/library/logo.png?raw=true "Bum Face")
 
 ##Get It Now
 Just want to download and use it?
@@ -35,7 +35,7 @@ Go to ```Services.msc``` and start ```node the ```Node-App-Windows-Launcher``` s
 
 
 
-![Alt text](/library/logo.png?raw=true "User Interface")
+
 
 
 
