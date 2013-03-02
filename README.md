@@ -2,7 +2,7 @@
 
 Launch all your node apps (or anything I guess) easily with this windows service - simply add your application to application.json
 
-\centerline{\includegraphics[height=2in]{/library/logo.png}}
+\centerline{\library[height=2in]{logo.png}}
 
 ##Get It Now
 Just want to download and use it?
