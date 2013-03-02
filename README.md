@@ -2,8 +2,6 @@
 
 Launch all your node apps (or anything I guess) easily with this windows service - simply add your application to application.json
 
-![Alt text](/library/logo.png?raw=true "Bum Face")
-
 ##Get It Now
 Just want to download and use it?
 
@@ -14,7 +12,7 @@ Run the windows installer at the above link.
 
 Edit the ```applications.json``` found in ```%AppData%\Node-App-Windows-Launcher\```.
 
-Go to ```Services.msc``` and start ```node the ```Node-App-Windows-Launcher``` service. 
+Go to ```Services.msc``` and start ```Node-App-Windows-Launcher``` service. 
 
 ##Example Applications.json
 
@@ -34,7 +32,7 @@ Go to ```Services.msc``` and start ```node the ```Node-App-Windows-Launcher``` s
     }
 
 
-
+![Alt text](/library/logoBig.png?raw=true "Bum Face")
 
 
 
