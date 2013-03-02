@@ -4,7 +4,7 @@ Launch all your node apps (or anything I guess) easily with this windows service
 
 ##Get It Now
 Just want to download and use it?
-```http://j4m355.com/node-app-windows-launcher/```
+http://j4m355.com/node-app-windows-launcher/
 
 ##Installing
 Run the windows installer at the above link. 
