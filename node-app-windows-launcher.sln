@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "node-app-windows-launcher", "node-app-windows-launcher\node-app-windows-launcher.csproj", "{010580B4-7EC2-49AF-A92F-25FFC65C4BC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "windows-service", "node-app-windows-launcher\windows-service.csproj", "{010580B4-7EC2-49AF-A92F-25FFC65C4BC6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "library", "library\library.csproj", "{74EBF0C5-BC29-4253-8F87-4562122F3B9E}"
 EndProject

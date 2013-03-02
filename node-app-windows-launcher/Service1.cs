@@ -19,24 +19,22 @@ namespace node_app_windows_launcher
         {
             InitializeComponent();
             ApplicationService = new ApplicationService();
-            //ApplicationService.Read("applications.json");
+           
         }
 
         protected override void OnStart(string[] args)
         {
+           // "C:\\code\\node-app-windows-launcher\\node-app-windows-launcher\\applications.json"
             
-            //var applicationService = new ApplicationService();
+            //doesnt work:
+            //if (args[0] == null || string.IsNullOrEmpty(args[0]) || args == null) throw new Exception("Pass in path to applications.json");
 
-            ApplicationService.StartApplications("C:\\code\\node-app-windows-launcher\\node-app-windows-launcher\\applications.json");
-
-          /*  _thread = new Thread(new ApplicationService().StartApplications("C:\\code\\node-app-windows-launcher\\node-app-windows-launcher\\applications.json"));
-            _thread.Start();
-           */
+            ApplicationService.StartApplications(args[0]);
         }
 
         protected override void OnStop()
         {
             ApplicationService.StopApplications();
-        }
+        } 
     }
 }

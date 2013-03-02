@@ -28,7 +28,7 @@ namespace library
             Applications = JsonConvert.DeserializeObject<Model>(output);
         }
 
-        public ThreadStart StartApplications(string jsonPath)
+        public void StartApplications(string jsonPath)
         {
             JsonPath = jsonPath;
             Read();
@@ -39,7 +39,7 @@ namespace library
                 Task.Factory.StartNew(() => Execute(aCopy.Command, aCopy.Path, aCopy.Parameters));
                 
             }
-            return null;
+           
         }
 
         public void StopApplications()
