@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -20,7 +20,7 @@ namespace library
             Pids = new List<int>();
         }
 
-        public void Read(string jsonPath)
+        private void Read()
         {
             var streamReader = new StreamReader(JsonPath);
             var output = streamReader.ReadToEnd();
@@ -28,9 +28,10 @@ namespace library
             Applications = JsonConvert.DeserializeObject<Model>(output);
         }
 
-        public void StartApplications()
+        public ThreadStart StartApplications(string jsonPath)
         {
-            if(JsonPath == null) throw new Exception();
+            JsonPath = jsonPath;
+            Read();
 
             foreach (var a in Applications.Application)
             {
@@ -38,6 +39,7 @@ namespace library
                 Task.Factory.StartNew(() => Execute(aCopy.Command, aCopy.Path, aCopy.Parameters));
                 
             }
+            return null;
         }
 
         public void StopApplications()
@@ -61,6 +63,7 @@ namespace library
             process.StartInfo = startInfo;
             process.Start();
             Pids.Add(process.Id);
+            process.WaitForExit(Int32.MaxValue);
         }
 
     }

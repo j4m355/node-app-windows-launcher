@@ -39,7 +39,7 @@
             // serviceInstaller1
             // 
             this.serviceInstaller1.Description = "Easily start nodejs apps";
-            this.serviceInstaller1.DisplayName = "Node App Windows Launcher";
+            this.serviceInstaller1.DisplayName = "Node-App-Windows-Launcher";
             this.serviceInstaller1.ServiceName = "Node-App-Windows-Launcher";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 

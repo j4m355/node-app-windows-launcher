@@ -19,12 +19,19 @@ namespace node_app_windows_launcher
         {
             InitializeComponent();
             ApplicationService = new ApplicationService();
+            //ApplicationService.Read("applications.json");
         }
 
         protected override void OnStart(string[] args)
         {
-            ApplicationService.Read("applications.json");
-            ApplicationService.StartApplications();
+            
+            //var applicationService = new ApplicationService();
+
+            ApplicationService.StartApplications("C:\\code\\node-app-windows-launcher\\node-app-windows-launcher\\applications.json");
+
+          /*  _thread = new Thread(new ApplicationService().StartApplications("C:\\code\\node-app-windows-launcher\\node-app-windows-launcher\\applications.json"));
+            _thread.Start();
+           */
         }
 
         protected override void OnStop()
