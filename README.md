@@ -33,6 +33,7 @@ Go to ```Services.msc``` and start ```node the ```Node-App-Windows-Launcher``` s
 
 
 
+![Alt text](/library/logo.png?raw=true "User Interface")
 
 
 
