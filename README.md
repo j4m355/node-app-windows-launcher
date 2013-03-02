@@ -32,7 +32,6 @@ Go to ```Services.msc``` and start ```Node-App-Windows-Launcher``` service.
     }
 
 
-![Alt text](/library/logoBig.png?raw=true "Bum Face")
 
 
 
