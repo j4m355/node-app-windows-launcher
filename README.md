@@ -3,7 +3,7 @@
 Launch all your node apps (or anything I guess) easily with this windows service - simply add your application to application.json
 
 ##Get It Now
-Just want to download and use it?
+Just want to download, install and use it?
 
 [Download It Here](http://j4m355.com/node-app-windows-launcher/)
 
