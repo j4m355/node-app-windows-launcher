@@ -11,11 +11,11 @@ using library;
 
 namespace node_app_windows_launcher
 {
-    public partial class Service1 : ServiceBase
+    public partial class NodeAppLaunchService : ServiceBase
     {
         public ApplicationService ApplicationService { get; set; }
 
-        public Service1()
+        public NodeAppLaunchService()
         {
             InitializeComponent();
             ApplicationService = new ApplicationService();

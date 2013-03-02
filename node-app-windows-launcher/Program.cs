@@ -17,7 +17,7 @@ namespace node_app_windows_launcher
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[] 
             { 
-                new Service1() 
+                new NodeAppLaunchService() 
             };
             ServiceBase.Run(ServicesToRun);
         }
