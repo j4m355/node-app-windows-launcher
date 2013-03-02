@@ -24,12 +24,8 @@ namespace node_app_windows_launcher
 
         protected override void OnStart(string[] args)
         {
-           // "C:\\code\\node-app-windows-launcher\\node-app-windows-launcher\\applications.json"
-            
-            //doesnt work:
-            //if (args[0] == null || string.IsNullOrEmpty(args[0]) || args == null) throw new Exception("Pass in path to applications.json");
-
-            ApplicationService.StartApplications(args[0]);
+            var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            ApplicationService.StartApplications(appDataPath + "\\Node-App-Windows-Launcher\\applications.json");
         }
 
         protected override void OnStop()

@@ -12,8 +12,8 @@ namespace ServiceTestHarness
         static void Main(string[] args)
         {
             var applicationService = new ApplicationService();
-            //applicationService.Read();
-            applicationService.StartApplications("C:\\code\\node-app-windows-launcher\\node-app-windows-launcher\\applications.json");
+            
+            applicationService.StartApplications(args[0]);
             Console.Read();
             applicationService.StopApplications();
         }
