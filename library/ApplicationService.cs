@@ -19,6 +19,12 @@ namespace library
             Pids = new List<int>();
         }
 
+        public void Read(string applicationJsonPath)
+        {
+            JsonPath = applicationJsonPath;
+            Read();
+        }
+
         private void Read()
         {
             var streamReader = new StreamReader(JsonPath);
