@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,8 @@ namespace WpfUI
     public partial class MainWindow : Window
     {
         public ApplicationService ApplicationService { get; set; }
+        public ServiceService Service { get; set; }
+        
 
         public MainWindow()
         {
@@ -34,14 +37,21 @@ namespace WpfUI
         private void Initialise()
         {
             ApplicationService = new ApplicationService();
+            Service = new ServiceService("node-app-windows-launcher");
+
             var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             ApplicationService.Read(appDataPath + "\\Node-App-Windows-Launcher\\applications.json");
-            GridDataOutput.DataContext = ApplicationService.Applications;
+            GridDataOutput.DataContext = ApplicationService.Applications.Application;
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+           Service.RestartService(50);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

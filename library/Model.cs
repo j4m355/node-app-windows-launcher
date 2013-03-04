@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace library
 {
     public class Model
     {
-        public List<SubModel> Application { get; set; }  
+        public ObservableCollection<SubModel> Application { get; set; }  
     }
 
     public class SubModel

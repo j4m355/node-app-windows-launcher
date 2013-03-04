@@ -49,7 +49,7 @@
         <DockPanel Grid.Row="2">
            
             <Button DockPanel.Dock="Left" Margin="10,10,10,10" Click="ButtonBase_OnClick" Content="Restart Service"></Button>
-                <Button DockPanel.Dock="Right" Margin="10,10,10,10" Content="Save"></Button>
+                <Button DockPanel.Dock="Right" Margin="10,10,10,10" Content="Save" Click="Button_Click_1"></Button>
             </DockPanel>
         
     </Grid>
