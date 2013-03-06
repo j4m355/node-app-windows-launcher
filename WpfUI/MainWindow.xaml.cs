@@ -40,18 +40,22 @@ namespace WpfUI
             Service = new ServiceService("node-app-windows-launcher");
 
             var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            ApplicationService.Read(appDataPath + "\\Node-App-Windows-Launcher\\applications.json");
+            ApplicationService.ReadJson(appDataPath + "\\Node-App-Windows-Launcher\\applications.json");
             GridDataOutput.DataContext = ApplicationService.Applications.Application;
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
+            GridDataOutput.IsEnabled = false;
            Service.RestartService(50);
+           GridDataOutput.IsEnabled = true;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            GridDataOutput.IsEnabled = false;
+            ApplicationService.SaveJson();
+            GridDataOutput.IsEnabled = true;
         }
     }
 }

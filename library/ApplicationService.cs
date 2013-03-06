@@ -12,39 +12,51 @@ namespace library
     {
         public string JsonPath { get; set; }
         public Model Applications { get; set; }
-        private List<int> Pids { get; set; } 
+        private List<int> Pids { get; set; }
 
         public ApplicationService()
         {
             Pids = new List<int>();
         }
 
-        public void Read(string applicationJsonPath)
+        public void ReadJson(string applicationJsonPath)
         {
             JsonPath = applicationJsonPath;
-            Read();
+            ReadJson();
         }
 
-        private void Read()
+        private void ReadJson()
         {
-            var streamReader = new StreamReader(JsonPath);
-            var output = streamReader.ReadToEnd();
-            streamReader.Close();
-            Applications = JsonConvert.DeserializeObject<Model>(output);
+            using (var streamReader = new StreamReader(JsonPath))
+            {
+                var output = streamReader.ReadToEnd();
+                Applications = JsonConvert.DeserializeObject<Model>(output);
+            }
         }
+
+        public void SaveJson()
+        {
+            var jsonString = JsonConvert.SerializeObject(Applications);
+            using (var streamWriter = new StreamWriter(JsonPath, false))
+            {
+                streamWriter.Write(jsonString);
+            }
+        }
+
+
 
         public void StartApplications(string jsonPath)
         {
             JsonPath = jsonPath;
-            Read();
+            ReadJson();
 
             foreach (var a in Applications.Application)
             {
                 var aCopy = a;
                 Task.Factory.StartNew(() => Execute(aCopy.Command, aCopy.Path, aCopy.Parameters));
-                
+
             }
-           
+
         }
 
         public void StopApplications()

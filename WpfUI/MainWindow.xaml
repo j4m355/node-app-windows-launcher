@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WpfUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"></RowDefinition>
@@ -17,40 +17,17 @@
             <DataGrid Name="GridDataOutput" 
                       AutoGenerateColumns="True"
                     ItemsSource="{Binding}"
-                      Height="170"></DataGrid>
+                      Height="249"></DataGrid>
         
-            <Label Content="Add Program"></Label>
             
-            <StackPanel Orientation="Horizontal">
-            <StackPanel Orientation="Horizontal">
-            <Label Content="Program Name"></Label>
-            <TextBox></TextBox>
-            </StackPanel>
 
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Working Directory"></Label>
-            <TextBox></TextBox>
-            </StackPanel>
-            </StackPanel>
-
-            <StackPanel Orientation="Horizontal">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Command"></Label>
-                    <TextBox></TextBox>
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="Arguements"></Label>
-                    <TextBox></TextBox>
-                </StackPanel>
-            </StackPanel>
         </StackPanel>
 
-        <DockPanel Grid.Row="2">
-           
-            <Button DockPanel.Dock="Left" Margin="10,10,10,10" Click="ButtonBase_OnClick" Content="Restart Service"></Button>
-                <Button DockPanel.Dock="Right" Margin="10,10,10,10" Content="Save" Click="Button_Click_1"></Button>
-            </DockPanel>
+        <Grid Grid.Row="2">
+      
+                <Button DockPanel.Dock="Left" Margin="10,10,364,10" Click="ButtonBase_OnClick" Content="Restart Service"></Button>
+                <Button DockPanel.Dock="Right" Margin="341,10,10,10" Content="Save" Click="Button_Click_1"></Button>
+            </Grid>
         
     </Grid>
 </Window>
