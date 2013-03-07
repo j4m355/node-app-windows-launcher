@@ -41,7 +41,7 @@ namespace WpfUI
 
             var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             ApplicationService.ReadJson(appDataPath + "\\Node-App-Windows-Launcher\\applications.json");
-            GridDataOutput.DataContext = ApplicationService.Applications.Application;
+            GridDataOutput.DataContext = ApplicationService.Model;
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)

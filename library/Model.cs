@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace library
 {
-    public class Model
+    public class Model2
     {
-        public ObservableCollection<SubModel> Application { get; set; }  
+        public ObservableCollection<Model> Applications { get; set; }  
     }
 
-    public class SubModel
+    public class Model
     {
         public string Name { get; set; }
         public string Path { get; set; }

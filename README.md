@@ -16,20 +16,20 @@ Go to ```Services.msc``` and start ```Node-App-Windows-Launcher``` service.
 
 ##Example Applications.json
 
-    {
-    "Application":[{
-				    "Name" : "Top",
-				    "Path" : "C:\\code\\node-server-resource-monitor\\", 
-				    "Command" : "C:\\Program Files\\nodejs\\node.exe",
-				    "Parameters" : "index.js"
-				    },
-				    {
-				    "Name" : "whats-my-ip",
-				    "Path" : "C:\\code\\node-whats-my-ip\\", 
-				    "Command" : "C:\\Program Files\\nodejs\\node.exe",
-				    "Parameters" : "index.js"
-				    }]
-    }
+    [
+		{
+			"Name" : "Top",
+			"Path" : "C:\\code\\node-server-resource-monitor\\", 
+			"Command" : "C:\\Program Files\\nodejs\\node.exe",
+			"Parameters" : "index.js"
+			},
+			{
+			"Name" : "whats-my-ip",
+			"Path" : "C:\\code\\node-whats-my-ip\\", 
+			"Command" : "C:\\Program Files\\nodejs\\node.exe",
+			"Parameters" : "index.js"
+		}
+	]
 
 
 

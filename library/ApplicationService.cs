@@ -11,7 +11,7 @@ namespace library
     public class ApplicationService
     {
         public string JsonPath { get; set; }
-        public Model Applications { get; set; }
+        public IList<Model> Model { get; set; }
         private List<int> Pids { get; set; }
 
         public ApplicationService()
@@ -30,13 +30,17 @@ namespace library
             using (var streamReader = new StreamReader(JsonPath))
             {
                 var output = streamReader.ReadToEnd();
-                Applications = JsonConvert.DeserializeObject<Model>(output);
+                Model = JsonConvert.DeserializeObject<IList<Model>>(output);
             }
         }
 
         public void SaveJson()
         {
-            var jsonString = JsonConvert.SerializeObject(Applications);
+            //dirty hack to remove empty entries inserted from the ui - shouldnt be in here
+            var editedObject =
+                Model.Where(x => x.Name != null && !string.IsNullOrEmpty(x.Name)).ToList();
+
+            var jsonString = JsonConvert.SerializeObject(editedObject);
             using (var streamWriter = new StreamWriter(JsonPath, false))
             {
                 streamWriter.Write(jsonString);
@@ -50,11 +54,10 @@ namespace library
             JsonPath = jsonPath;
             ReadJson();
 
-            foreach (var a in Applications.Application)
+            foreach (var a in Model)
             {
                 var aCopy = a;
                 Task.Factory.StartNew(() => Execute(aCopy.Command, aCopy.Path, aCopy.Parameters));
-
             }
 
         }
