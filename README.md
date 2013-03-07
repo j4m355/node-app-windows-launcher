@@ -10,9 +10,13 @@ Just want to download, install and use it?
 ##Installing
 Run the windows installer at the above link. 
 
-Edit the ```applications.json``` found in ```%AppData%\Node-App-Windows-Launcher\```.
+Run the UI from the desktop and set your settings then click "save" and then "restart service"
 
-Go to ```Services.msc``` and start ```Node-App-Windows-Launcher``` service. 
+What its doing:
+
+Editing the ```applications.json``` in ```%AppData%\Node-App-Windows-Launcher\```.
+
+If restarting the service fails go to ```Services.msc``` and start ```Node-App-Windows-Launcher``` service. 
 
 ##Example Applications.json
 
