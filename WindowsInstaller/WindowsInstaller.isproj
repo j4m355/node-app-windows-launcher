@@ -32,5 +32,9 @@
 			<Name>windows-service</Name>
 			<Project>{010580B4-7EC2-49AF-A92F-25FFC65C4BC6}</Project>
 		</ProjectReference>
+		<ProjectReference Include="..\WpfUI\WpfUI.csproj">
+			<Name>WpfUI</Name>
+			<Project>{D79D1082-912D-463C-86EE-28B248C6DA84}</Project>
+		</ProjectReference>
 	</ItemGroup>
 </Project>

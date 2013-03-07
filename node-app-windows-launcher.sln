@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTestHarness", "Servi
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "WindowsInstaller", "WindowsInstaller\WindowsInstaller.isproj", "{1DA4FC7F-AD0F-46FB-932C-EFE38E081AA3}"
 	ProjectSection(ProjectDependencies) = postProject
+		{D79D1082-912D-463C-86EE-28B248C6DA84} = {D79D1082-912D-463C-86EE-28B248C6DA84}
 		{010580B4-7EC2-49AF-A92F-25FFC65C4BC6} = {010580B4-7EC2-49AF-A92F-25FFC65C4BC6}
 	EndProjectSection
 EndProject

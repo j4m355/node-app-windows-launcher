@@ -344,6 +344,7 @@
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{BB4A8BCA-D0B8-487A-9B5C-DD153B8E3B82}</td><td>AppDataFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{622FAC39-B20B-475E-8ED3-A50B75095626}</td><td>NODE_APP_WINDOWS_LAUNCHER2</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WpfUI.Primary_output</td><td>{B0BA6BD3-B08C-4B20-80A2-9F59A293A7C9}</td><td>INSTALLDIR</td><td>2</td><td/><td>wpfui.primary_output</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>windows_service.Primary_output</td><td>{C67688A8-D01C-479B-8AB6-A1F1BABFB61E}</td><td>INSTALLDIR</td><td>2</td><td/><td>windows_service.primary_outp</td><td>81</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -914,7 +915,7 @@
 		<row><td>CustomSetup</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>OutOfNoRbDiskSpace &lt;&gt; 1</td><td>0</td></row>
 		<row><td>CustomSetup</td><td>Next</td><td>[_IsSetupTypeMin]</td><td>Custom</td><td>1</td><td>0</td></row>
 		<row><td>CustomSetupTips</td><td>OK</td><td>EndDialog</td><td>Return</td><td>1</td><td>1</td></row>
-		<row><td>CustomerInformation</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>NOT Installed</td><td>1</td></row>
+		<row><td>CustomerInformation</td><td>Back</td><td>NewDialog</td><td>LicenseAgreement</td><td>NOT Installed</td><td>1</td></row>
 		<row><td>CustomerInformation</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>CustomerInformation</td><td>Next</td><td>EndDialog</td><td>Exit</td><td>(SERIALNUMVALRETRYLIMIT) And (SERIALNUMVALRETRYLIMIT&lt;0) And (SERIALNUMVALRETURN&lt;&gt;SERIALNUMVALSUCCESSRETVAL)</td><td>2</td></row>
 		<row><td>CustomerInformation</td><td>Next</td><td>NewDialog</td><td>DestinationFolder</td><td>(Not SERIALNUMVALRETURN) OR (SERIALNUMVALRETURN=SERIALNUMVALSUCCESSRETVAL)</td><td>3</td></row>
@@ -942,7 +943,7 @@
 		<row><td>InstallChangeFolder</td><td>Up</td><td>DirectoryListUp</td><td>0</td><td>1</td><td>0</td></row>
 		<row><td>InstallWelcome</td><td>Back</td><td>NewDialog</td><td>SplashBitmap</td><td>NOT Installed</td><td>0</td></row>
 		<row><td>InstallWelcome</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
-		<row><td>InstallWelcome</td><td>Next</td><td>NewDialog</td><td>CustomerInformation</td><td>1</td><td>0</td></row>
+		<row><td>InstallWelcome</td><td>Next</td><td>NewDialog</td><td>LicenseAgreement</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>NOT Installed</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>ISPrintButton</td><td>DoAction</td><td>ISPrint</td><td>1</td><td>0</td></row>
@@ -1179,6 +1180,8 @@
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
+		<row><td>j4m355.com</td><td>ProgramMenuFolder</td><td>j4m355.com</td><td/><td>1</td><td/></row>
+		<row><td>nodeap_1_node_app_windows_launcher</td><td>j4m355.com</td><td>NODEAP~1|Node App Windows Launcher</td><td/><td>1</td><td/></row>
 	</table>
 
 	<table name="DrLocator">
@@ -1872,6 +1875,7 @@
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>AlwaysInstall</td><td>WpfUI.Primary_output</td></row>
 		<row><td>AlwaysInstall</td><td>windows_service.Primary_output</td></row>
 	</table>
 
@@ -1887,8 +1891,9 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>applications.json2</td><td>ISX_DEFAULTCOMPONENT1</td><td>APPLIC~1.JSO|applications.json</td><td>0</td><td/><td/><td/><td>1</td><td>C:\code\node-app-windows-launcher\node-app-windows-launcher\applications.json</td><td>1</td><td/></row>
+		<row><td>applications.json</td><td>ISX_DEFAULTCOMPONENT1</td><td>APPLIC~1.JSO|applications.json</td><td>0</td><td/><td/><td/><td>1</td><td>C:\code\node-app-windows-launcher\applications.json</td><td>1</td><td/></row>
 		<row><td>windows_service.primary_outp</td><td>windows_service.Primary_output</td><td>windows-service.Primary output</td><td>0</td><td/><td/><td>0</td><td>1</td><td>&lt;windows-service&gt;|Built</td><td>3</td><td/></row>
+		<row><td>wpfui.primary_output</td><td>WpfUI.Primary_output</td><td>WpfUI.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;WpfUI&gt;|Built</td><td>3</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2147,6 +2152,7 @@
 		<col def="S0">Miscellaneous</col>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_8469F0C9_FF4C_4E7C_AC63_4C7AD6C691C2_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_FCDF38E7_0D86_4AB9_A62A_C76E42CAEBD8_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WpfUI.Primary_output</td><td/><td/><td>_9E0CF0FB_EDC6_426B_BCCA_F3D699492DEC_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>windows_service.Primary_output</td><td/><td/><td>_34C0E772_F887_4F91_BC6C_B4F87BD63C23_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
@@ -2467,6 +2473,7 @@
 		<row><td>ProgramFilesFolder</td><td/><td/><td>1</td></row>
 		<row><td>SystemFolder</td><td/><td/><td>1</td></row>
 		<row><td>WindowsFolder</td><td/><td/><td>1</td></row>
+		<row><td>WpfUI</td><td>WpfUI\WpfUI.csproj</td><td/><td>2</td></row>
 		<row><td>windows-service</td><td>node-app-windows-launcher\windows-service.csproj</td><td/><td>2</td></row>
 	</table>
 
@@ -2778,7 +2785,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>j4m355.com</td><td>0</td><td/><td>295772335</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>j4m355.com</td><td>0</td><td/><td>966882708</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>295804686</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>295804686</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>295812495</td></row>
@@ -3590,6 +3597,10 @@
 		<row><td>IDS_PROGMSG_XML_ROLLBACK_FILES</td><td>1033</td><td>Rolling back XML file changes...</td><td>0</td><td/><td>295804686</td></row>
 		<row><td>IDS_PROGMSG_XML_UPDATE_FILE</td><td>1033</td><td>Updating XML file %s...</td><td>0</td><td/><td>295804686</td></row>
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>295804686</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>Node App Windows Launcher UI</td><td>0</td><td/><td>966888724</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>Node App Windows Launcher UI</td><td>0</td><td/><td>966864212</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>Node App Windows Launcher UI</td><td>0</td><td/><td>966894996</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>Node App Windows Launcher UI</td><td>0</td><td/><td>966874740</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>295804686</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>295804686</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>295804686</td></row>
@@ -3879,8 +3890,11 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>295804686</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>295804686</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>295808782</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>http://www.j4m355.com</td><td>0</td><td/><td>295784623</td></row>
-		<row><td>ID_STRING3</td><td>1033</td><td>j4m355.com</td><td>0</td><td/><td>295772335</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>http://www.j4m355.com.com</td><td>0</td><td/><td>966882708</td></row>
+		<row><td>ID_STRING3</td><td>1033</td><td>j4m355.com</td><td>0</td><td/><td>966882708</td></row>
+		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>966876180</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>966853972</td></row>
+		<row><td>ID_STRING6</td><td>1033</td><td>Node App Windows Launcher UI</td><td>0</td><td/><td>966891188</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>295804686</td></row>
 	</table>
 
@@ -4576,6 +4590,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
+		<row><td>_Built</td><td>WpfUI.Primary_output</td><td/><td>nodeap_1_node_app_windows_launcher</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4661,6 +4676,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
+		<row><td>_Built</td><td>nodeap_1_node_app_windows_launcher</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>WpfUI.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>_Built1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>WpfUI.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td/><td/><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
