@@ -10,7 +10,7 @@ Just want to download, install and use it?
 ##Installing
 Run the windows installer at the above link. 
 ![Alt text](/library/fuck.png?raw=true "Credentials")
-```<YourComputerName>\<yourUserName>```
+<YourComputerName>\<yourUserName>
 
 
 Run the UI from the desktop and set your settings then click "save" and then "restart service"
