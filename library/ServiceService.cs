@@ -16,6 +16,7 @@ namespace library
         {
             ServiceName = serviceName;
             Service = new ServiceController(ServiceName);
+           
         }
 
         public void StartService(int timeoutMilliseconds)
