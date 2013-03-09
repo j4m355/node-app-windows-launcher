@@ -10,7 +10,7 @@ Just want to download, install and use it?
 ##Installing
 Run the windows installer at the above link. 
 
-<img align="left" width="240" height="140" src="/library/fuck.png?raw=true">
+<img align="left" width="280" height="180" src="/library/fuck.png?raw=true">
 
 Credentials format:
     "<YourComputerName>\<yourUserName>"
