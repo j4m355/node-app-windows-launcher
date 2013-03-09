@@ -10,16 +10,16 @@ Just want to download, install and use it?
 ##Installing
 Run the windows installer at the above link. 
 
-<img align="left" width="280" height="180" src="/library/fuck.png?raw=true">
+<img align="right" width="280" height="180" src="/library/fuck.png?raw=true">
 
-Credentials format:
+###Credentials format:
     
 	"YourComputerName\yourUserName"
 
 
 Run the UI from the desktop and set your settings then click "save" and then "restart service"
 
-What its doing:
+###What its doing:
 
 Editing the ```applications.json``` in ```%AppData%\Node-App-Windows-Launcher\```.
 
