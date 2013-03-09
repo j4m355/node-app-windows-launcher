@@ -19,11 +19,10 @@ Run the windows installer at the above link.
 
 Run the UI from the desktop and set your settings then click "save" and then "restart service"
 
-###What its doing:
+###What crappy UI is doing:
 
-Editing the ```applications.json``` in ```%AppData%\Node-App-Windows-Launcher\```.
+Editing the ```applications.json``` in ```%AppData%\Node-App-Windows-Launcher\``` and giving you the ability to ```Start``` ```Stop``` ```Restart``` the windows service
 
-If restarting the service fails go to ```Services.msc``` and start ```Node-App-Windows-Launcher``` service. 
 
 ##Example Applications.json
 
