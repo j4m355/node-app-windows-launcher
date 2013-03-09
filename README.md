@@ -13,7 +13,8 @@ Run the windows installer at the above link.
 <img align="left" width="280" height="180" src="/library/fuck.png?raw=true">
 
 Credentials format:
-    "<YourComputerName>\<yourUserName>"
+    
+	"YourComputerName\yourUserName"
 
 
 Run the UI from the desktop and set your settings then click "save" and then "restart service"
