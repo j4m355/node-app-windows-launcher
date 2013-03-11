@@ -17,11 +17,11 @@ Run the windows installer at the above link.
 	"YourComputerName\yourUserName"
 
 
-Run the UI from the desktop and set your settings then click "save" and then "restart service"
+Run the UI from the desktop and set your settings then click "save and restart"
 
 ###What crappy UI is doing:
 
-Editing the ```applications.json``` in ```%AppData%\Node-App-Windows-Launcher\``` and giving you the ability to ```Start``` ```Stop``` ```Restart``` the windows service
+Editing the ```applications.json``` in ```%AppData%\Node-App-Windows-Launcher\``` and giving you the ability to ```Start``` ```Stop``` ```Restart``` the windows service.
 
 
 ##Example Applications.json
